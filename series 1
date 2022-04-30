@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int ser(int n){
+    
+    if(n==0 || n==1){
+        return 1;
+    }
+    else{
+        return (n*ser(n-1));
+    }
+}
+
+int main() {
+    int z=0 ,i,n;
+    printf("for where do you want to sum of series: ");
+    scanf("%d", &n);
+    
+    for(i=1;i<n+1;i++){
+        z = z + ser(i)/i;
+    }    
+
+    printf("the sum of the series is %d", z);
+    
+    return 0;
+}
