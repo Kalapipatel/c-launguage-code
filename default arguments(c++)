@@ -1,0 +1,27 @@
+#include <iostream>
+#include<cmath>
+#include<string>
+using namespace std;
+
+void display(char='k',int= 3);
+
+int  main(){
+    int count=7;
+    cout<<"no argumeny passed: ";
+    display(); //default perameters
+
+    cout<<"one argument oassed: ";
+    display('@');//one peramenter used
+
+    cout<<"all arguments are passed: ";
+    display('$',count);
+
+    return 0;
+}
+
+void display(char c,int i){
+    for (int j=0;j<i;j++){
+        cout<<c;
+    }
+    cout<<endl;
+}
