@@ -43,11 +43,12 @@ int main(){
   
   for(int i=0;i<n;i++){
     obj[i].getdata();
-    obj[i].printdata();
+    
     
     if(obj[i].salary<5000){
       obj[i].addsal();
     }
+    obj[i].printdata();
     
   }
   return 0;
