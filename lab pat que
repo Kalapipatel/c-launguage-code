@@ -1,0 +1,55 @@
+#include<iostream>
+
+using namespace std;
+
+class employee{
+public:
+  
+  string id;
+  string dep;
+  string name;
+  int age;
+  int salary;
+  int ext_hr;
+  
+  void getdata(){
+    cin>>id;
+    cin>>dep;
+    cin>>name;
+    cin>>age;
+    cin>>salary;
+    cin>>ext_hr;
+  }
+  
+  void printdata(){
+    cout<<id;
+    cout<<dep;
+    cout<<name;
+    cout<<age;
+    cout<<salary;
+    cout<<ext_hr;
+  }
+  void addsal(){
+    salary += 100*ext_hr;
+  }
+};
+
+int main(){
+  int n;
+  cout<<"enter how much object you want?? "
+  cin>>n;
+  
+  employee obj[4];
+  
+  for(int i=0;i<n;i++){
+    obj[i].getdata();
+    obj[i].printdata();
+    
+    if(obj[i].salary<5000){
+      obj[i].addsal();
+    }
+    
+  }
+  return 0;
+}
+
